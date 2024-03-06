@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react"
-
+import SplashScreen from 'react-native-splash-screen'
 import {
   ActivityIndicator,
   SafeAreaView,
@@ -29,6 +29,10 @@ function App() {
 
   useEffect(() => {
     setup()
+    
+    setTimeout(() => {
+      SplashScreen.hide()
+    }, 500)
   }, [])
   
   if (!isPlayerReady) {
@@ -38,8 +42,10 @@ function App() {
       </SafeAreaView>
     )
   }
+ 
 
   return (
+    
     <View style={styles.container}>
       <StatusBar barStyle={"light-content"} />
       <MusicPlayer />
