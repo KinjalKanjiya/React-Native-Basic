@@ -25,19 +25,22 @@ const MusicPlayer = () => {
     });
 
     const renderArtWork = () => {
+        console.log("Artwork:", track?.artwork);
+
         return (
             <View style={styles.listArtWrapper}>
                 <View style={styles.albumContainer}>
                     {track?.artwork && (
                         <Image
                             style={styles.albumArtImg}
-                            source={{ uri: track?.artwork?.toString() }}
+                            source={{ uri: track?.artwork?.uri }}
                         />
                     )}
                 </View>
             </View>
         );
     };
+    
 
     return (
         <View style={styles.container}>

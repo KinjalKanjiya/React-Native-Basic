@@ -18,25 +18,38 @@ const ControlCenter = () => {
         await TrackPlayer.skipToPrevious()
     }
 
-    const togglePlayback = async () => {
-        const playbackState = await TrackPlayer.getState();
-        if (playbackState === State.Paused || playbackState === State.Ready) {
-            await TrackPlayer.play();
-        } else if (playbackState === State.Playing) {
-            await TrackPlayer.pause();
-        }
-    }
+    // const togglePlayback = async (playback) => {
+    //     const playbackState = await TrackPlayer.getState();
+    //     if (playbackState === State.Paused || playbackState === State.Ready) {
+    //         await TrackPlayer.play();
+    //     } else if (playbackState === State.Playing) {
+    //         await TrackPlayer.pause();
+    //     }
+    // }
     
+  
+  
+    const tooglePlayback = async (playback) =>{
+      const currentTrack = await TrackPlayer.getCurrentTrack()
+      if(currentTrack !== null){
+          if(playback === State.Paused || playback === State.Ready){
+              await TrackPlayer.play(); // Add parentheses to invoke the function
+          } else {
+              await TrackPlayer.pause(); // Add parentheses to invoke the function
+          }
+      }
+  }
+  
 
   return (
     <View style={styles.container}>
         <Pressable onPress={skipToPrevious}>
             <Icon style={styles.icon} name="skip-previous" size={40} />
         </Pressable>
-        <Pressable onPress={() => togglePlayback(playBackState)}>
+        <Pressable onPress={() => tooglePlayback(playBackState)}>
         <Icon 
         style={styles.icon} 
-        name={playBackState.state === 'playing' ? "pause" : "play-arrow"} 
+        name={playBackState ===  State.Playing ? "pause" :"play-arrow"} 
         size={75} 
     />
         </Pressable>

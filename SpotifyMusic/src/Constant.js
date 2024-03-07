@@ -5,7 +5,7 @@ export const PlayListData =  [
     title: 'Ganesh ',
     artist: '',
     album: '',
-    artwork: require('./assets/image/Ganesh.jpg'),
+    artwork: require('./assets/image/Ganesh.png'),
     url: require('./assets/audio/Ganesh.mp3'),
   },
   {
@@ -69,6 +69,42 @@ export const PlayListData =  [
             artwork: require('./assets/image/Saude_Bazi.jpg'),
 
             url: require('./assets/audio/Saudebazi.mp3'),
+          },
+          {
+            id:9,
+            title: 'Vhalam Avo ne',
+            artist: 'Jigardan Gadhvi ',
+            album: 'Love Ni Bhavai ',
+            artwork: require('./assets/image/Vhalam_Avo_Ne.jpg'),
+
+            url: require('./assets/audio/Vhalam_Avo_Ne.mp3'),
+          },
+          {
+            id:10,
+            title: 'Tere Hawale',
+            artist: 'Arijit Singh ',
+            album: 'Laal Singh Chaddha',
+            artwork: require('./assets/image/Tere_Hawale.jpg'),
+
+            url: require('./assets/audio/Tere_Hawale.mp3'),
+          },
+          {
+            id:11,
+            title: 'Yara Teri Yari',
+            artist: 'Darshan Rawal  ',
+            album: 'Four More Shots Please!',
+            artwork: require('./assets/image/Yara_Teri_Yari.jpg'),
+
+            url: require('./assets/audio/Yara_Teri_Yari.mp3'),
+          },
+          {
+            id:12,
+            title: 'Radha Ne Shyam Mali Jashe',
+            artist: 'Sachin Sanghvi&Shruti Pathak',
+            album: 'Radha Ne Shyam Mali Jashe',
+            artwork: require('./assets/image/Radha_Shaym.jpg'),
+
+            url: require('./assets/audio/Radha_Shyam.mp3'),
           },
           
           
