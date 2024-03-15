@@ -8,7 +8,6 @@ import {
   SafeAreaView,
   ScrollView
 } from 'react-native'
-
 function App(){
   return(
    <SafeAreaView>
